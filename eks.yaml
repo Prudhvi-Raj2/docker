@@ -1,0 +1,13 @@
+api version: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata: 
+  name: expense-cluster
+  region: us-east-1
+
+magagedNodeGroups:
+  - name: ng-1
+    instanceTypes: ["m5.large", "c3.large","c4.large","c5.large"]
+    desiredCapacity: 3
+    spot: true
+  
